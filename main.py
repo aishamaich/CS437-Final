@@ -17,4 +17,6 @@ async def get_image():
         img_bytes = winton.read()
     imgio = BytesIO(img_bytes)
     imgio.seek(0)
+
+    
     return StreamingResponse(content=imgio, media_type="image/gif")
