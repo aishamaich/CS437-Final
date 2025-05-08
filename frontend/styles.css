@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    height:100vh;
+    width:100%;
+}
+
+body {
+    height:90vh;
+    width:100%;
+    background-image: url('imgs/paw-print.png'); 
+    background-position: 300px 75px;
+}
+
+.center-div {
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.camera-div {
+    margin: 15px 10px 10px 10px;
+    width: 640px;
+    height: 480px;
+    border: 3px solid black;
+    background-color: #fafafa;
+}
+
+.camera-btn {
+    background-image: url('imgs/camera-icon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 75px;
+    height: 75px;
+    border: none;
+    cursor: pointer;
+}
+
+.score-div {
+    margin: 10px;
+    padding: 15px 10px;
+    font-size: 2.5em;
+}
+
+
+#title {
+    font-weight: 400;
+    font-size: 3em;
+}
+
+.delius-regular {
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.modal p {
+    margin: 5px;
+}
+
+.modal button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background-color: #fafafa;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.modal button:hover {
+    background-color: #efefef;
+}
+
+.blank {
+    height: 20%;
+}

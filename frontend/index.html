@@ -1,0 +1,25 @@
+<html>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+    <body>
+        <div id="container" class="center-div">
+            <h1 id="title" class="delius-regular">Dog Detection</h1>
+            <div class="camera-div">
+                <iframe id='camera-feed' class="camera" src="" width="640" height="480" frameborder="0"></iframe>
+            </div>
+            <button id='camera-btn' title='Turn Camera On' class="camera-btn" onclick="toggleCamera()"></button>
+            <div id="score-div" class="score-div delius-regular">0.00%</div>
+        </div>
+
+
+        <div id="dog-modal" class="modal delius-regular">
+            <div class="modal-content">
+                <p>Dog detected! Did we beat your dog?</p>
+                <button id="yes-button">Yes</button>
+                <button id="no-button">No</button>
+            </div>
+            <div class="blank"></div>
+        </div>
+    </body>
+</html>
