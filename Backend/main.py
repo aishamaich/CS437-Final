@@ -38,7 +38,8 @@ async def detectDogs():
         if (Vilib.object_detection_list_parameter is not None and len(Vilib.object_detection_list_parameter) > 0):
             first_object = Vilib.object_detection_list_parameter[0]
             object_type = first_object.get('class_name')
-            yield(f"data: {object_type}\n\n")
+            if (object_type == 'dog' or object_type == 'cat'):
+                yield(f"data: {object_type}\n\n")
         await asyncio.sleep(0.5)
         
 px = Picarx()
