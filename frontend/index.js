@@ -49,15 +49,19 @@ function startStream() {
                                     last_dog = now;
 
                                     showDogModal().then((confirmed) => {
-                                        total++;
-                                        if (confirmed) {
-                                            console.log("Pi beat Dog.");
-                                            pi++;
+                                        if (confirmed == 'nad') {
+                                            nad();
                                         } else {
-                                            console.log("Dog beat Pi.");
-                                        }
+                                            total++;
+                                            if (confirmed) {
+                                                console.log("Pi beat Dog.");
+                                                pi++;
+                                            } else {
+                                                console.log("Dog beat Pi.");
+                                            }
 
-                                        score.innerHTML = (((pi*100)/total).toFixed(2)).toString() + "%";
+                                            score.innerHTML = (((pi*100)/total).toFixed(2)).toString() + "%";
+                                        }
                                     });
                                 } else {
                                     console.log("Dog detected but in cooldown.");
@@ -97,6 +101,7 @@ function showDogModal() {
         const modal = document.getElementById('dog-modal');
         const yesBtn = document.getElementById('yes-button');
         const noBtn = document.getElementById('no-button');
+        const nadBtn = document.getElementById('nad-button');
 
         modal.style.display = 'flex';
 
@@ -104,6 +109,7 @@ function showDogModal() {
             modal.style.display = 'none'; 
             yesBtn.removeEventListener('click', onYes);
             noBtn.removeEventListener('click', onNo);
+            nadBtn.removeEventListener('click', onNad);
         };
 
         const onYes = () => {
@@ -116,7 +122,27 @@ function showDogModal() {
             resolve(false);
         };
 
+        const onNad = () => {
+            cleanup();
+            resolve('nad');
+        };
+
         yesBtn.addEventListener('click', onYes);
         noBtn.addEventListener('click', onNo);
+        nadBtn.addEventListener('click', onNad);
     });
+}
+
+function mad() {
+    const fn = document.getElementById('fn');
+    let curFN = fn.innerHTML.slice(5);
+    let newFN = parseInt(curFN) + 1
+    fn.innerHTML = "FN - " + newFN.toString();
+}
+
+function nad() {
+    const fp = document.getElementById('fp');
+    let curFP = fp.innerHTML.slice(5);
+    let newFP = parseInt(curFP) + 1
+    fp.innerHTML = "FP - " + newFP.toString();
 }

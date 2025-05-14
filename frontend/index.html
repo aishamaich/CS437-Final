@@ -10,14 +10,26 @@
             </div>
             <button id='camera-btn' title='Turn Camera On' class="camera-btn" onclick="toggleCamera()"></button>
             <div id="score-div" class="score-div delius-regular">0.00%</div>
+            <button id='mad-btn' class="mad-btn" onclick="mad()">Missed a Dog?</button>
+            <div id="stats-div" class="stats-div delius-regular">
+                <p id="fp">FP - 0</p>
+                <p id="fn">FN - 0</p>
+            </div>
         </div>
 
 
         <div id="dog-modal" class="modal delius-regular">
             <div class="modal-content">
-                <p>Dog detected! Did we beat your dog?</p>
-                <button id="yes-button">Yes</button>
-                <button id="no-button">No</button>
+                <div>
+                    <p>Dog detected! Did we beat your dog?</p>
+                </div>
+                <div>
+                    <button id="yes-button">Yes</button>
+                    <button id="no-button">No</button>
+                </div>
+                <div>
+                    <button id="nad-button">Not a Dog</button>
+                </div>
             </div>
             <div class="blank"></div>
         </div>

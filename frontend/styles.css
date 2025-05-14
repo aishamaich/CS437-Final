@@ -46,11 +46,21 @@ body {
 }
 
 .score-div {
-    margin: 10px;
+    margin: 5px;
     padding: 15px 10px;
     font-size: 2.5em;
 }
 
+.stats-div {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stats-div p {
+    margin: 0 10px;
+}
 
 #title {
     font-weight: 400;
@@ -61,6 +71,22 @@ body {
     font-family: "Delius", cursive;
     font-weight: 400;
     font-style: normal;
+}
+
+.mad-btn {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: "Delius", cursive;
+    font-size: 1.5em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mad-btn:hover {
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 .modal {
@@ -90,7 +116,7 @@ body {
 }
 
 .modal button {
-    margin: 10px;
+    margin: 5px;
     padding: 10px 20px;
     border: 1px solid #333;
     background-color: #fafafa;
